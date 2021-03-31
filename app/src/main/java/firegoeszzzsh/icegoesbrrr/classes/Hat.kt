@@ -3,17 +3,18 @@ package firegoeszzzsh.icegoesbrrr.classes
 import android.content.Context
 import android.graphics.LightingColorFilter
 import android.util.AttributeSet
-import android.widget.ImageView
+import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 import firegoeszzzsh.icegoesbrrr.R
 import firegoeszzzsh.icegoesbrrr.d
+import firegoeszzzsh.icegoesbrrr.utility.UtilFuncs
 
 class Hat(context: Context, attrs: AttributeSet): FireIceButton(context, attrs) {
     companion object {
         var inLobby: Boolean = true
         val selectedHat = MutableLiveData<Hat>() }
-    var imgSrc= 0
+    var owner = MutableLiveData<String>("")
 
     init {
         context.obtainStyledAttributes(attrs, R.styleable.Hat).apply {
@@ -26,13 +27,21 @@ class Hat(context: Context, attrs: AttributeSet): FireIceButton(context, attrs) 
         }
         setClickListener()
         obsSelected()
+        d.game.hatListenToGame(this)
     }
 
     private fun setClickListener() {
         setOnClickListener {
-            d.player.hat = this
-            d.player.playerChangeTrigger.value = Unit
-            if(inLobby) selectedHat.value = this }
+            d.game.pickHat(this) {
+                if(it) {
+                    d.player.hatClass = this
+                    d.player.hat = type
+                    d.player.playerChangeTrigger.value = Unit
+                    selectedHat.value = this
+                }
+                else { Log.i("testen", "Hat/setClickListener - klappt nicht mit firestore")}
+            }
+        }
     }
 
     private fun obsSelected() {
@@ -42,5 +51,10 @@ class Hat(context: Context, attrs: AttributeSet): FireIceButton(context, attrs) 
                 invalidate()
             } else {background.colorFilter = LightingColorFilter(0xFFFFFFFF.toInt(), 0); invalidate()}
         })
+        owner.observe(context as LifecycleOwner, {
+            if(it != "" && it != d.fireUser?.uid) UtilFuncs.disable(this)
+            else {UtilFuncs.enable(this)}
+        })
+
     }
 }

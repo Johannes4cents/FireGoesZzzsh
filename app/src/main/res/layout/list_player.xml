@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_marginBottom="3dp"
         android:orientation="horizontal"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
+        <firegoeszzzsh.icegoesbrrr.classes.FireIceButton
             android:id="@+id/hatIcon"
             android:layout_width="25dp"
             android:layout_height="25dp" />
-        <ImageView
+        <firegoeszzzsh.icegoesbrrr.classes.FireIceButton
             android:layout_marginStart="5dp"
             android:id="@+id/helperIcon"
             android:layout_width="25dp"
@@ -22,7 +21,7 @@
             android:layout_height="25dp"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="SeriAce test"/>
+            android:text="Unknown Player"/>
         <ImageView
             android:id="@+id/host"
             android:src="@drawable/o_host_icon"

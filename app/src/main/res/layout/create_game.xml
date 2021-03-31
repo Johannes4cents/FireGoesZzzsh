@@ -121,13 +121,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <firegoeszzzsh.icegoesbrrr.classes.Hat
-                android:id="@+id/yellowHat"
+                android:id="@+id/goldHat"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_weight="1"
                 android:background="@color/app_black"
                 android:src="@drawable/yellow_hat"
-                app:hat="yellowHat"
+                app:hat="goldHat"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -200,7 +200,7 @@
             app:layout_constraintTop_toBottomOf="@+id/hatChoiceConst">
 
             <ImageView
-                app:whatHelper="baby"
+                app:whatHelper="helperBaby"
                 android:id="@+id/helper_baby"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
@@ -208,7 +208,7 @@
                 app:srcCompat="@drawable/h_baby" />
 
             <ImageView
-                app:whatHelper="butler"
+                app:whatHelper="helperButler"
                 android:id="@+id/helper_butler"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -216,7 +216,7 @@
                 app:srcCompat="@drawable/h_butler" />
 
             <ImageView
-                app:whatHelper="dragon"
+                app:whatHelper="helperDragon"
                 android:id="@+id/helper_dragon"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
@@ -224,7 +224,7 @@
                 app:srcCompat="@drawable/h_dragon" />
 
             <ImageView
-                app:whatHelper="girl"
+                app:whatHelper="helperGirl"
                 android:id="@+id/helper_girl"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
@@ -232,7 +232,7 @@
                 app:srcCompat="@drawable/h_girl" />
 
             <ImageView
-                app:whatHelper="michelin"
+                app:whatHelper="helperMichelin"
                 android:id="@+id/helper_michelin"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -240,7 +240,7 @@
                 app:srcCompat="@drawable/h_michelin" />
 
             <ImageView
-                app:whatHelper="zac"
+                app:whatHelper="helperZac"
                 android:id="@+id/helper_zac"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
@@ -261,16 +261,12 @@
 
         <LinearLayout
             android:id="@+id/playerNameLinear"
-            android:orientation="vertical"
-
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
+            android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/counterBubble"
-            tools:layout_editor_absoluteX="1dp">
-
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/counterBubble"></LinearLayout>
 
         <TextView
             android:id="@+id/playerCounter"

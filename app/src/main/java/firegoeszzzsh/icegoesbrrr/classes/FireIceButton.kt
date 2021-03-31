@@ -30,12 +30,12 @@ open class FireIceButton(context: Context, attributeSet: AttributeSet): AppCompa
             "startShift" -> { R.drawable.a_schicht_beginnen }
             "take" -> { R.drawable.a_nehmen }
             "endShift" -> { R.drawable.a_schicht_beenden }
-            "pink" -> {R.drawable.pink_hat}
-            "red" -> {R.drawable.red_hat}
-            "blue" -> {R.drawable.blue_hat}
-            "green" -> {R.drawable.green_hat}
-            "black" -> {R.drawable.black_hat}
-            "gold" -> {R.drawable.yellow_hat}
+            "pinkHat" -> {R.drawable.pink_hat}
+            "redHat" -> {R.drawable.red_hat}
+            "blueHat" -> {R.drawable.blue_hat}
+            "greenHat" -> {R.drawable.green_hat}
+            "blackHat" -> {R.drawable.black_hat}
+            "goldHat" -> {R.drawable.yellow_hat}
             else -> 0
         }
 

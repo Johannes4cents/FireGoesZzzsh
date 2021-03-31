@@ -38,6 +38,9 @@ class CreateGameFragment: Fragment() {
         clickListener(b.enterNickInput, b.nickNameTextView)
         observer()
         handleIncomingPlayer()
+        d.game.getBasicGameInfo { code ->
+            b.gameCode.text = code
+        }
         return b.root
     }
 

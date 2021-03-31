@@ -27,14 +27,15 @@ class Helper(context: Context, attrs: AttributeSet): FireIceButton(context, attr
     }
 
     private fun clickListener() {
-        d.game.pickHelper(this) { helperChanged ->
-            if(helperChanged) {
-                setImageResource(getImageSelected())
-                d.player.helper = this
+        setOnClickListener {
+            d.game.pickHelper(this) { helperChanged ->
+                if(helperChanged) {
+                    setImageResource(getImageSelected())
+                    d.player.helperClass = this
+                }
             }
         }
     }
-
     private fun obsPlayer() {
         owner.observe(context as LifecycleOwner, { owner ->
             if(owner != d.fireUser?.uid && owner != "") {
