@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_black">
+
+        <ImageView
+            android:id="@+id/counterBubble"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helperConstraint"
+            app:srcCompat="@drawable/b_counter_bubble" />
+
+        <ImageView
+            android:id="@+id/gameCodeBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/o_gamecodebox" />
+
+        <TextView
+            android:id="@+id/gameCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black_italic"
+            android:text="AOPD"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameCodeBox"
+            app:layout_constraintEnd_toEndOf="@+id/gameCodeBox"
+            app:layout_constraintStart_toStartOf="@+id/gameCodeBox"
+            app:layout_constraintTop_toTopOf="@+id/gameCodeBox" />
+
+        <RadioGroup
+            android:id="@+id/hatChoiceConst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/enterNickConstraint">
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/redHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/red_hat"
+                app:hat="redHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/blueHat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/blueHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/blue_hat"
+                app:hat="blueHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/greenHat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/redHat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/greenHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/green_hat"
+                app:hat="greenHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pinkHat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/blueHat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/pinkHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/pink_hat"
+                app:hat="pinkHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/blackHat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/greenHat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/blackHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/black_hat"
+                app:hat="blackHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/yellowHat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pinkHat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <firegoeszzzsh.icegoesbrrr.classes.Hat
+                android:id="@+id/yellowHat"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@color/app_black"
+                android:src="@drawable/yellow_hat"
+                app:hat="yellowHat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/blackHat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/enterNickConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameCodeBox">
+
+            <EditText
+                android:id="@+id/enterNickInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:maxLength="14"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nickNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ems="10"
+                android:gravity="center"
+                android:text="Enter nickname"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <firegoeszzzsh.icegoesbrrr.classes.AppButton
+            android:id="@+id/appButton"
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/backBtnCreate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/b_partie_starten" />
+
+        <LinearLayout
+            android:id="@+id/helperConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/o_helper_screen"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hatChoiceConst">
+
+            <ImageView
+                app:whatHelper="baby"
+                android:id="@+id/helper_baby"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_baby" />
+
+            <ImageView
+                app:whatHelper="butler"
+                android:id="@+id/helper_butler"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_butler" />
+
+            <ImageView
+                app:whatHelper="dragon"
+                android:id="@+id/helper_dragon"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_dragon" />
+
+            <ImageView
+                app:whatHelper="girl"
+                android:id="@+id/helper_girl"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_girl" />
+
+            <ImageView
+                app:whatHelper="michelin"
+                android:id="@+id/helper_michelin"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_michelin" />
+
+            <ImageView
+                app:whatHelper="zac"
+                android:id="@+id/helper_zac"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/h_zac" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/backBtnCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/o_backbutton" />
+
+        <LinearLayout
+            android:id="@+id/playerNameLinear"
+            android:orientation="vertical"
+
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/counterBubble"
+            tools:layout_editor_absoluteX="1dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/playerCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="#FBFAFA"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/counterBubble"
+            app:layout_constraintEnd_toEndOf="@+id/counterBubble"
+            app:layout_constraintStart_toStartOf="@+id/counterBubble"
+            app:layout_constraintTop_toTopOf="@+id/counterBubble" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

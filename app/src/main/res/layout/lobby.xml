@@ -1,0 +1,89 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/app_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <firegoeszzzsh.icegoesbrrr.classes.AppButton
+            android:id="@+id/btnPartieBeitreten"
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/b_partie_beitreten"
+            app:btnType="joinGame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameCodeBoxLobby" />
+
+        <ImageView
+            android:id="@+id/gameCodeBoxLobby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/o_gamecodebox" />
+
+        <EditText
+            android:id="@+id/gameCodeInput"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:hint="Enter game code"
+            android:inputType="textPersonName"
+            android:maxLength="4"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintEnd_toEndOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintStart_toStartOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintTop_toTopOf="@+id/gameCodeBoxLobby" />
+
+        <TextView
+            android:id="@+id/gameCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Enter game code"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintEnd_toEndOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintStart_toStartOf="@+id/gameCodeBoxLobby"
+            app:layout_constraintTop_toTopOf="@+id/gameCodeBoxLobby" />
+
+        <firegoeszzzsh.icegoesbrrr.classes.AppButton
+            android:id="@+id/btn1HandyPartie"
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="248dp"
+            android:src="@drawable/b_1_handy_partie"
+            app:btnType="1phoneGame"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <firegoeszzzsh.icegoesbrrr.classes.AppButton
+            android:id="@+id/btnPartieErstellen"
+            android:layout_width="300dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/b_partie_erstellen"
+            app:btnType="hostGame"
+            app:layout_constraintBottom_toTopOf="@+id/btn1HandyPartie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

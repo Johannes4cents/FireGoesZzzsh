@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startupFragment">
+    <fragment
+        android:id="@+id/createGameFragment"
+        android:name="firegoeszzzsh.icegoesbrrr.fragment.CreateGameFragment"
+        android:label="CreateGameFragment" >
+        <action
+            android:id="@+id/action_createGameFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="firegoeszzzsh.icegoesbrrr.fragment.StartupFragment"
+        android:label="StartupFragment" >
+        <action
+            android:id="@+id/action_startupFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+        <action
+            android:id="@+id/action_startupFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="firegoeszzzsh.icegoesbrrr.fragment.GameFragment"
+        android:label="GameFragment" />
+    <fragment
+        android:id="@+id/startScreenFragment"
+        android:name="firegoeszzzsh.icegoesbrrr.fragment.LobbyFragment"
+        android:label="StartScreenFragment" >
+        <action
+            android:id="@+id/action_startScreenFragment_to_createGameFragment"
+            app:destination="@id/createGameFragment" />
+        <action
+            android:id="@+id/action_startScreenFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="firegoeszzzsh.icegoesbrrr.fragment.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_startupFragment"
+            app:destination="@id/startupFragment" />
+    </fragment>
+</navigation>

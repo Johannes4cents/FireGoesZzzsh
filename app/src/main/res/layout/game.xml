@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/shiftPhase"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_black_italic"
+                android:text="Schichtbeginn"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/nickLinearGame"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nickNameGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#B8B8B8"
+                    android:gravity="center"
+                    android:text="SeriAceIsC00L"
+                    android:textColor="#121111"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/o_info_button" />
+        </LinearLayout>
+
+        <firegoeszzzsh.icegoesbrrr.classes.MagicQueue
+            android:id="@+id/magicQueueGame"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+        </firegoeszzzsh.icegoesbrrr.classes.MagicQueue>
+
+        <firegoeszzzsh.icegoesbrrr.classes.Screen
+            android:id="@+id/screenConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            />
+
+
+        <ScrollView
+            android:id="@+id/actionConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/screenConstraint">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/throwDice"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="throwDice" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/charge"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="charge" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/use"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="use" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/cast"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="cast" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/move"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="move" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/discard"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="discard" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/focus"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="focus" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/trade"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="trade" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/useStrength"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="useStrength" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/take"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="banishUnlock" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/endShift"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="endShift" />
+
+                    <firegoeszzzsh.icegoesbrrr.classes.Action
+                        android:id="@+id/startShift"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/a_blank"
+                        app:actionType="startShift" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

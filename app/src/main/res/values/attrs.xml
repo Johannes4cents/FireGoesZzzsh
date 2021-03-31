@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Action">
+    <attr name="actionType" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AppButton">
+        <attr name="btnType" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="Hat">
+        <attr name="hat" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="Helper">
+        <attr name="whatHelper" format="string"/>
+    </declare-styleable>
+</resources>
